@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{%load staticfiles%}
+{% block content %}
+<article class="post-container post-container--single" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+        <div class="post-meta">
+            <time datetime="" itemprop="datePublished" class="post-meta__date date"></time>
+            <span class="post-meta__tags tags"></span>
+        </div>
+        <h1 class="post-title"></h1>
+    </header>
+    <section class="post">
+        <div class="card">
+            {% for btype in blog_list %}
+            <h3 id="博客-ref">{{ btype.type_name }}</h3>
+            <ul>
+                {% for blog in blogs %}
+                     {%if btype.type_name == blog.blog_type|safe %}
+                     <li><a href="{% url 'blog_detail' blog.id %}">{{ blog.title }}</a></li>
+                     {% endif %}
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </div>
+    </section>
+</article>
+
+{% endblock %}

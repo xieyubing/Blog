@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{%load staticfiles%}
+{% block content %}
+
+<article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+        <div class="post-meta">
+            <time datetime="" itemprop="datePublished" class="post-meta__date date"></time>
+            <span class="post-meta__tags tags"></span>
+        </div>
+        <h1 class="post-title">关于我</h1>
+    </header>
+
+    <section class="post">
+        <p>一个 Java 开发者，喜欢研究一些新技术。</p>
+        <p>
+            平时喜欢整理个人博客，逛逛技术论坛。
+        </p>
+        <p>
+            了解一些 前端 基本技术和 Python 的简单用法。
+        </p>
+    </section>
+</article>
+{% endblock %}

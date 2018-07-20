@@ -1,0 +1,84 @@
+{%load staticfiles%}
+<html>
+<head>
+    <title>个人网站</title>
+    <link rel="stylesheet" href="{% static 'css/main.css'%}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/animate.css'%}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/tomorrow.css'%}" type="text/css" />
+</head>
+<body class="panel-cover">
+<span class="mobile btn-mobile-menu">
+      <div class="nav_container">
+         <nav class="nav-menu-item" style="float:right">
+            <i class="nav-menu-item">
+              <a href="/" title="" class="blog-button">  博客主页
+              </a>
+            </i>
+                <i class="nav-menu-item">
+
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      所有文章
+                  </a>
+                </i>
+                <i class="nav-menu-item">
+
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+                <i class="nav-menu-item">
+
+                  <a href="/about" title="about" class="btn-mobile-menu__icon">
+                      关于我
+                  </a>
+                </i>
+          </nav>
+      </div>
+    </span>
+<div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+        <div class="panel-main__content">
+            <!-- 头像效果-start -->
+            <div class="ih-item circle effect right_to_left">
+                <a href="/" title="前往主页" class="blog-button">
+                    <div class="img"><img src="{% static 'images/avatar.jpg' %}" alt="img"></div>
+                    <div class="info">
+                        <div class="info-back">
+                            <h2>
+                                leopardpan
+                            </h2>
+                            <p>
+                                Java / Android
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- 头像效果-end -->
+            <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for 江小白" class="blog-button">江小白</a></h1>
+            <span class="panel-cover__subtitle panel-subtitle">个人站</span>
+            <hr class="panel-cover__divider" />
+            <p class="panel-cover__description">欢迎来到我的个人站~</p>
+            <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+
+            <div class="navigation-wrapper">
+                <div>
+                    <nav class="cover-navigation cover-navigation--primary">
+                        <ul class="navigation">
+                            <li class="navigation__item"><a href="/" title="欢迎来到我的个人站~" class="blog-button">博客主页</a></li>
+                            <li class="navigation__item"><a href="/archive">所有文章</a></li>
+                            <li class="navigation__item"><a href="/tags">标签</a></li>
+                            <li class="navigation__item"><a href="/about">关于我</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel-cover--overlay cover-clear"></div>
+</div>
+</body>
+</html>
+

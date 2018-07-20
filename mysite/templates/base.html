@@ -1,0 +1,111 @@
+{%load staticfiles%}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>江小白</title>
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png'%}"/>
+    <link href="{% static 'images/favicon.png'%}" rel="shortcut icon" type="image/png"/>
+    <link rel="stylesheet" href="{% static 'css/main.css'%}"/>
+</head>
+<body>
+<span class="mobile btn-mobile-menu">
+      <div class="nav_container">
+         <nav class="nav-menu-item" style="float:right">
+            <i class="nav-menu-item">
+              <a href="/" title="" class="blog-button">  博客主页
+              </a>
+            </i>
+                <i class="nav-menu-item">
+
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      所有文章
+                  </a>
+                </i>
+                <i class="nav-menu-item">
+
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+                <i class="nav-menu-item">
+
+                  <a href="/about" title="about" class="btn-mobile-menu__icon">
+                      关于我
+                  </a>
+                </i>
+          </nav>
+      </div>
+    </span>
+<header class="panel-cover  panel-cover--collapsed">
+    <div class="panel-main">
+        <div class="panel-main__inner panel-inverted">
+            <div class="panel-main__content">
+                <div class="ih-item circle effect right_to_left">
+                    <a href="/" title="前往 江小白 的主页" class="blog-button">
+                        <div class="img"><img src="{% static 'images/avatar.jpg'%}" alt="png"></div>
+                        <div class="info">
+                            <div class="info-back">
+                                <h2> aloneest </h2>
+                                <p>Java / Android</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for 江小白" class="blog-button">江小白</a></h1>
+                <span class="panel-cover__subtitle panel-subtitle">个人站</span>
+                <hr class="panel-cover__divider"/>
+                <p class="panel-cover__description">欢迎来到我的个人站~</p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary">
+                <div class="navigation-wrapper"/>
+                <div>
+                    <nav class="cover-navigation cover-navigation--primary">
+                        <ul class="navigation">
+                            <li class="navigation__item"><a href="/" title="" class="blog-button">博客主页</a></li>
+                            <li class="navigation__item"><a href="/archive" title="/archive">所有文章</a></li>
+                            <li class="navigation__item"><a href="/tags" title="/tags">标签</a></li>
+                            <li class="navigation__item"><a href="/about" title="/about">关于我</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="panel-cover--overlay cover-clear"></div>
+</header>
+<div class="content-wrapper">
+    <div class="content-wrapper__inner">
+        {% block content %}{% endblock %}
+        <section class="footer">
+            <footer>
+                <div class="footer_div">
+                    <nav class="cover-navigation navigation--social">
+                        <ul class="navigation">
+                            <!-- Weibo -->
+                            <li class="navigation__item_social">
+                                <a href="http://weibo.com/5366874726" title="@5366874726 的微博" target="_blank">
+                                    <i class="social fa fa-weibo fa-2x"></i>
+                                    <span class="label">Weibo</span>
+                                </a>
+                            </li>
+                            <!-- Email -->
+                            <li class="navigation__item_social">
+                                <a href="mailto:leopardpan@icloud.com" title="Contact me">
+                                    <i class="social fa fa-envelope fa-2x"></i>
+                                    <span class="label">Email</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer_div">
+                    <p class="copyright text-muted">
+                        Copyright © 江小白 2018 Theme by <a href="/">aloneest</a>
+                    </p>
+                </div>
+            </footer>
+        </section>
+    </div>
+</div>
+</body>
+</html>

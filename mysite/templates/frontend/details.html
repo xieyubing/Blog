@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{%load staticfiles%}
+{% block content %}
+<article class="post-container post-container--single" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+        <h1 class="post-title">{{ blog.title }}</h1>
+        <div class="post-meta">
+            <img src="{% static 'images/calendar.png'%}" width="20px">
+            <time datetime="2016-12-02 00:00:00 +0000" itemprop="datePublished" class="post-meta__date date">{{ blog.created_time|date:"Y-m-d" }}</time>
+
+            <span id="busuanzi_container_page_pv" style="display: inline;"> | 阅读：<span id="busuanzi_value_page_pv">1</span>次</span>
+            <p></p>
+        </div>
+    </header>
+
+    <section class="post">
+        <p>{{ blog.describe }}</p>
+        {{ blog.content|safe }}
+    </section>
+</article>
+{% endblock %}
